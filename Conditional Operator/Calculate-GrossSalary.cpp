@@ -3,12 +3,12 @@ using namespace std;
 
 int main()
 {
-    int bs;
-    float da, hra, gross;
+    int bs; // Basic Salary Variable
+    float da,hra,gross;  // Here the variable for calculations
 
     cout<<"Enter basic salary: ";
     cin>>bs;
-
+    
     if(bs<=10000){
         da= bs * 0.8;
         hra = bs * 0.20;
