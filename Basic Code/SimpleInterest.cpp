@@ -12,5 +12,5 @@ int main()
     cout<<"Enter the time: ";
     cin>>t;
 
-    cout<<"Simple interest is: " <<(p*r*t) / 100;
+    cout<<"Simple interest is: " <<(p*r*t) / 100; 
 }
