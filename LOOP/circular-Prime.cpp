@@ -39,8 +39,15 @@ int main()
 
     bool circular = true;
     for(int i=0;i<digit-1;i++){
-        int rem = temp % 10;
-        temp = (rem * powten) + (temp / 10);
+        // int rem = temp % 10;
+        // temp = (rem * powten) + (temp / 10);
+        // cout<<"Rotation : " << temp <<endl;
+        // if(!checkPrime(temp)){
+        //     circular = false;
+        //     break;
+        // }
+        int rem = temp % powten;
+        temp = (rem * 10) + (temp / powten);
         cout<<"Rotation : " << temp <<endl;
         if(!checkPrime(temp)){
             circular = false;
