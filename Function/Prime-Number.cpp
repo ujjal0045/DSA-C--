@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int isPrime(int num){
+bool isPrime(int num){
     bool flag=true;
     if(num<2){
         return false;
