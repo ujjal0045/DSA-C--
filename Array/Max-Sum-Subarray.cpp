@@ -16,9 +16,26 @@ void subarray(int arr[],int n){
     cout<<"Maximum Subarray sum : "<<maxSum <<endl;
 }
 
+//Kadane's Algorithm (DP)
+void subarray2(int arr[],int n){
+    int maxSum = INT16_MIN;
+    int sum = 0;
+    for(int i=0;i<n;i++){
+        sum += arr[i];
+        maxSum = max(maxSum,sum);
+        if(sum < 0){
+            sum = 0;
+        }
+    }
+
+
+    cout<<"Maximum Subrarray sum : " << maxSum <<endl;
+}
+
+
 int main(){
     int arr[] = {2,-3,6,-5,4,2};
     int n = sizeof(arr) / sizeof(int);
 
-    subarray(arr,n);
+    subarray2(arr,n);
 }
