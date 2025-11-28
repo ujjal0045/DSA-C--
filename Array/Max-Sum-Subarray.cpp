@@ -27,9 +27,7 @@ void subarray2(int arr[],int n){
             sum = 0;
         }
     }
-
-
-    cout<<"Maximum Subrarray sum : " << maxSum <<endl;
+    cout<<"Maximum Subarray of sum : " <<maxSum <<endl;
 }
 
 
