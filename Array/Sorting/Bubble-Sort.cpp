@@ -2,6 +2,12 @@
 #include <algorithm>
 using namespace std;
 
+void printArr(int nums[],int n){
+    for(int i=0;i<n;i++){
+        cout<<nums[i] <<" ";
+    }
+}
+
 int main() {
     int arr []= {5,4,1,3,2};
     int n = sizeof(arr) / sizeof(int);
@@ -12,8 +18,6 @@ int main() {
             }
         }
     }
-    for(int i=0;i<n;i++){
-        cout<<arr[i] <<" ";
-    }
+    printArr(arr,n);
     return 0;
 }
