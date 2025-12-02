@@ -1,7 +1,23 @@
 #include<iostream>
 using namespace std;
 
-int search(int arr[][4],int n,int m,int key){
+// Third stair case method
+int stairCase(int mat[4][4],int n,int m,int key){
+    int r=0,c=m-1;
+    while(r<n && c>=0){
+        if(mat[r][c]== key){
+            return true;
+        } else if(mat[r][c] < key){
+            r++;
+        } else{
+            c--;
+        }
+    }
+    return false;
+}
+
+
+int Binarysearch(int arr[][4],int n,int m,int key){
     // Using Binary Search Algo
     int st=0,mid=0,end=n-1;
     for(int i=0;i<n;i++){
@@ -31,7 +47,7 @@ int search(int arr[][4],int n,int m,int key){
 
 int main(){
     int arr[4][4] = {{10,20,30,40},{15,25,35,45},{27,29,37,48},{32,33,39,50}};
-    if(search(arr,4,4,20)){
+    if(stairCase(arr,4,4,50)){
         cout<<"Found" <<endl;
     } else {
         cout<<"Not Found"<<endl;
