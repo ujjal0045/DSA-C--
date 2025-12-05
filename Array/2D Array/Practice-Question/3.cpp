@@ -1,6 +1,22 @@
 #include<iostream>
 using namespace std;
 
+void transpose_swap(int arr[][3],int r,int c){
+    // using swap method and not using any 2nd variables
+    for(int i=0;i<r;i++){
+        for(int j=i;j<c;j++){
+            swap(arr[i][j],arr[j][i]);
+        }
+    }
+    //Print 2d Array
+    for(int i=0;i<c;i++){
+        for(int j=0;j<r;j++){
+            cout<<arr[i][j] <<" ";
+        }
+        cout<<endl;
+    }
+}
+
 void transpose(int arr[][3],int r,int c){
     int CopyArr[c][r];
     for(int i=0;i<r;i++){
@@ -18,5 +34,5 @@ void transpose(int arr[][3],int r,int c){
 
 int main(){
     int arr[2][3] = {{10,20,30},{100,200,300}};
-    transpose(arr,2,3);
+    transpose_swap(arr,2,3);
 }
