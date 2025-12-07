@@ -6,7 +6,7 @@ int main(){
     cout<<"Enter the number: ";
     cin>>num;
 
-    while(num > 9){
+    while(num != 1 && num != 4){
         while(num != 0){
             r = num % 10;
             sum+= r* r;
