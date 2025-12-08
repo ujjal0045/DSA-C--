@@ -9,7 +9,7 @@ int main()
     cout<<"Enter the number: ";
     cin>>num;
 
-    for(j=1;j<=num;j++){
+    for(j=2;j<=num;j++){
         bool flag=true;
         for(i=2;i<j;i++){
             if(j%i==0){
