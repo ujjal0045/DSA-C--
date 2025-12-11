@@ -32,7 +32,7 @@ void trappedWater(int bar[],int n){
 }
 
 int main(){
-    int bar[] = {4,2,0,6,3,2,5};
+    int bar[] = {1,8,6,2,5,4,8,3,7};
     int n = sizeof(bar) / sizeof(int);
     trappedWater(bar,n);
 }

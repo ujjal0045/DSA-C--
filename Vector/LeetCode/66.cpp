@@ -3,7 +3,7 @@
 #include<algorithm>
 using namespace std;
 
-void plusOne(vector<int>& digits){
+vector<int> plusOne(vector<int>& digits){
    int n= digits.size();
         for(int i = n-1;i>=0;i--){
             if(digits[i]== 9){
@@ -25,6 +25,14 @@ void plusOne(vector<int>& digits){
 
 int main(){
     vector<int> nums={1,2,3};
-    plusOne(nums);
+    vector<int> result = plusOne(nums);
+
+    cout << "Result: [ ";
+    for(int x : result){
+        cout << x << " ";
+    }
+    cout << "]";
+
+    return 0;
 
 }
