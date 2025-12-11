@@ -26,6 +26,32 @@ vector<vector<int>> threeSum(vector<int>& nums){
     return output;
 }
 
+// Two pointer approach
+vector<vector<int>> threeSum2(vector<int>& nums){
+    int n= nums.size();
+    sort(nums.begin(),nums.end());
+    set<vector <int>> s; // the best use is ignore -> Duplicate
+    vector<vector<int>> output;
+
+    // Brute Force 
+    for(int i=0;i<n-2;i++){
+        int st=i+1,end = n-1;
+        while(st < end){
+            if(nums[i] + nums[st] + nums[end] < 0){
+                st++;
+            } else if(nums[i] + nums[st] + nums[end] > 0){
+                end--;
+            } else{
+                s.insert({nums[i],nums[st],nums[end]});
+            }
+        }
+    }
+    for(auto val : s){
+        output.push_back(val);
+    }
+    return output;
+}
+
 int main(){
     vector<int>num = {-1,0,1,2,-1,-4};
     vector<vector<int>> ans = threeSum(num);
