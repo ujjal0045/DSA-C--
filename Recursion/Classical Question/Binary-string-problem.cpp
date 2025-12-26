@@ -23,11 +23,11 @@ void binString2(int n,string ans)
         cout<<ans<<endl;
         return;
     }
-    if(ans.size()-1 != '1'){
-        binString(n-1,0,ans+'0');
-        binString(n-1,1,ans+'1');
+    if(ans[ans.size()-1] != '1'){
+        binString2(n-1, ans+'0');
+        binString2(n-1, ans+'1');
     } else{
-        binString(n-1,0,ans+'0');
+        binString2(n-1,ans+'0');
     }
 }
 
