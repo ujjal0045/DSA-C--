@@ -24,12 +24,28 @@ bool isUnique(int num){
     return true;
 }
 
+bool isUnique2(int num){
+    if(num < 0) num = -num; // Handle nagetive numbers
+
+    int freq[10] = {0}; // Make all element 0
+
+    while(num > 0){
+        int digit = num % 10;
+        if(freq[digit] == 1){
+            return false;
+        }
+        freq[digit]++;
+        num /= 10;
+    }   
+    return true;
+}
+
 int main(){
     int num;
     cout<<"Enter the number : ";
     cin>>num;
 
-    if(isUnique(num)){
+    if(isUnique2(num)){
         cout<<"Unique number : "<<num <<endl;
     } else{
         cout<<"Not an Unique Number : "<<num<<endl;
