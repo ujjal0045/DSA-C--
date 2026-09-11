@@ -13,10 +13,25 @@ void reverseString(string s){
     cout<<"Reverse data: "<<data<<endl;
 }
 
+// 2nd method and more efficitent
+void reverseString2(string &s){
+    int left = 0;
+    int right = s.length()-1;
+    while(left<right){
+        char temp = s[left];
+        s[left]= s[right];
+        s[right] = temp;
+
+        left++;
+        right--;
+    }
+    cout<<"Reverse data: "<<s<<endl;
+}
+
 int main() {
     string st1 ="";
     cout<<"Enter the data: ";
-    cin>>st1;
+    getline(cin,st1);
     reverseString(st1);
     return 0;
 }
